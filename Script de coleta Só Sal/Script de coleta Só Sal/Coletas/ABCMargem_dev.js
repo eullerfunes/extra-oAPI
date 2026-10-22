@@ -8,11 +8,11 @@ const DATA_INICIAL_PADRAO = '20241226'; // Formato YYYYMMDD
 
 // --- CREDENCIAIS POSTGRESQL ---
 const db = new Pool({
-    host: process.env.host,       
+    host: process.env.host || 'db.othgmlgiivguzvtultkz.supabase.co',       
     port: parseInt(process.env.port || '5432', 10),          
-    user: process.env.user,         
+    user: process.env.user || 'postgres',         
     password: process.env.password, 
-    database: process.env.dataBase
+    database: process.env.dataBase || 'postgres'
 });
 
 
