@@ -9,11 +9,11 @@ const ARQUIVO_LOG = 'erros_sincronizacao_real_vendido.txt'; // Log separado para
 
 // --- CREDENCIAIS POSTGRESQL ---
 const db = new Pool({
-    host: process.env.host,       
+    host: process.env.host || 'db.othgmlgiivguzvtultkz.supabase.co',       
     port: parseInt(process.env.port || '5432', 10),          
-    user: process.env.user,         
+    user: process.env.user || 'postgres',         
     password: process.env.password, 
-    database: process.env.dataBase
+    database: process.env.dataBase || 'postgres'
 });
 
 const FILIAIS = [
